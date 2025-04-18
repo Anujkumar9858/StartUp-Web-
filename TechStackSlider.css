@@ -1,0 +1,43 @@
+/* TechStackSlider.css */
+.tech-icon-container {
+    transition: all 0.3s ease;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .tech-icon-container:hover {
+    transform: scale(1.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, #e0f7fa, #ffffff, #e0f7fa);
+  }
+  
+  .text-dark {
+    color: #343a40;
+  }
+  
+  /* Ensure smooth animation */
+  .d-flex {
+    display: flex;
+    will-change: transform;
+    align-items: center;
+  }
+  
+  /* Optional: Add a subtle pulse animation on hover */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .tech-icon-container:hover {
+    animation: pulse 1.5s infinite;
+  }

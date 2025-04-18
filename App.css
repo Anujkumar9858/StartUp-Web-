@@ -1,0 +1,145 @@
+/* Chat Bubble */
+
+.chat-bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999; /* Ensure it stays above other elements */
+}
+
+/* Chat Button */
+.bubble-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+  animation: bounce 4.5s infinite; /* Adjusted duration for faster bounce */
+}
+
+.bubble-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15px); /* Increased distance */
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-15px); /* Increased distance */
+  }
+}
+
+/* Chat Interface */
+.chat-interface {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 10000; /* Higher z-index to ensure it's on top of everything */
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #764ba2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.chat-body {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-footer input {
+  width: 80%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chat-footer button {
+  background-color: #764ba2;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background-color: #667eea;
+}
+
+/* Clear Chat Button */
+.clear-chat-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px; /* Adjusted padding to match other buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Adjusted font size */
+  transition: background-color 0.3s ease;
+}
+
+.clear-chat-button:hover {
+  background-color: #c0392b;
+}
+
+/* Messages */
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.message.user {
+  background-color: #e0e0e0;
+  align-self: flex-end;
+}
+
+.message {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
